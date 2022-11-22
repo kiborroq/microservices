@@ -11,14 +11,14 @@
 ---
 
 ## 2. Program requirements:
-- #### maven
-- #### java 8
+- #### Maven
+- #### Java 8
+- #### Docker
 
 ---
 
 ## 3. Run program:
-1) Adjust builder settings (see [build.sh](build.sh))
-2) Run app: 
+Adjust builder settings (see [build.sh](build.sh)) and then in project root run: 
 ```shell
 bash build.sh
 ```
