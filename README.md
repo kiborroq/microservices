@@ -6,7 +6,7 @@
 2. This project use two third-party api:
    * COVID-19 statistic (see [docs](https://restcountries.com))
    * Countries information (see [docs](https://covid-api.com/api/))
-3. Project detailed information (see [en.subject.pdf](en.subject.pdf))
+3. Project detailed information (see [en.subject.pdf](files/en.subject.pdf))
 
 ---
 
