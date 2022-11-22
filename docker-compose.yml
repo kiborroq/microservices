@@ -1,0 +1,29 @@
+services:
+  discovery-server:
+    image: discovery-server:0.0.1-SNAPSHOT
+    build: discovery-server/
+    ports:
+      - 8761:8761
+  covid-service:
+    image: covid-service:0.0.1-SNAPSHOT
+    build: covid-service/
+    depends_on:
+      - discovery-server
+  countries-service:
+    image: countries-service:0.0.1-SNAPSHOT
+    build: countries-service/
+    depends_on:
+      - discovery-server
+  aggregator-service:
+    image: aggregator-service:0.0.1-SNAPSHOT
+    build: aggregator-service/
+    depends_on:
+      - covid-service
+      - countries-service
+  gateway-service:
+    image: gateway-service:0.0.1-SNAPSHOT
+    build: gateway-service/
+    depends_on:
+      - aggregator-service
+    ports:
+      - 80:80
